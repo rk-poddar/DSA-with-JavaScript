@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Searching</title>
+
+    <script>
+
+        //let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+        //let item = 78
+        //let index = undefined
+        
+        // array searching
+        //for(let i=0; i<=data.length; i++){
+        //    if(data[i]==item){
+        //        index = i
+        //        break;
+        //    }
+        //}
+        //console.log(index);
+        //document.write(index)
+
+        // search using inbuilt method
+        //console.log(data.indexOf(item));
+        //document.write(data.indexOf(item))
+
+        
+        // searching using input field
+        function searchElm(){
+            let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+            let item = document.getElementById('item').value
+            value = parseInt(item)
+            let index = undefined;
+
+            for(let i=0; i<=data.length; i++){
+                if(data[i]===value){
+                    index = i
+                    break;
+                }
+            }
+            document.write(index)
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" id="item" placeholder="Enter the item"/>
+    <button onclick="searchElm()">Search Element</button>
+</body>
+</html>
