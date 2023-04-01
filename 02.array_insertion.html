@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+
+    <script>
+
+        //let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+        //let newElm = 70;
+        //let position = 6;
+
+        // Insertion
+        //for(let i=data.length-1; i>=0; i--){
+        //    //document.write(`${data[i]} <br/>`)
+        //    if(i>=position){
+        //        data[i+1]=data[i]
+        //        if(i==position){
+        //            data[i] = newElm
+        //        }
+        //    }
+        //}
+        //console.log(data);
+        //document.write(data)
+
+        // Insertion using input field
+        function insertElm(){
+            let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+            let newElm = document.getElementById('newelm').value;
+            let position = document.getElementById('position').value;
+
+            for(let i=data.length-1; i>=0; i--){
+                if(i>=position){
+                    data[i+1]=data[i]
+                    if(i==position){
+                        data[i] = newElm
+                    }
+                }
+            }
+            console.log(data);
+            document.write(data)
+        }
+
+        // insertion using inbuilt method
+        //let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+        //data.splice(0,0,19)
+        //console.log(data);
+
+    </script>
+
+</head>
+<body>
+    <input type="text" name="" id="position" placeholder="Enter Position">
+    <input type="text" name="" id="newelm" placeholder="Enter New Element">
+    <button onclick="insertElm()">Set Element</button>
+</body>
+</html>
