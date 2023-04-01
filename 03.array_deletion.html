@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Deletion</title>
+
+    <script>
+
+        //let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+        //let position = 3
+        //for(let i=position; i<data.length-1; i++){
+        //    data[i] = data[i+1]
+        //}
+        //data.pop()
+        //data.length = data.length - 1
+        //document.write(data)
+
+        function deleteelm(){
+            let data = [9, 45, 2, 8, 25, 23, 7, 78, 0, 11, 41, 77]
+            let position = document.getElementById('position').value
+            position = parseInt(position)
+            for(let i=position; i<data.length-1; i++){
+                data[i] = data[i+1]
+            }
+            //data.pop()
+            data.length = data.length - 1
+            document.write(data)
+        }
+
+    </script>
+    
+</head>
+<body>
+    <input type="text" name="" id="position" >
+    <button onclick="deleteelm()">Delete Element</button>
+</body>
+</html>
